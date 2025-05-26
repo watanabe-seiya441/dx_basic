@@ -168,7 +168,6 @@ def fit(
 
         net.eval()
 
-        # ここはtestデータではなくvalデータとするべきかも知れない
         #disable=Trueではプログレスバーを表示しない
         for inputs_test, labels_test in tqdm(test_loader, disable=True):
             test_batch_size = len(labels_test)
