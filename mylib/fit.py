@@ -89,8 +89,7 @@ def fit(
             # print("labels_train =", labels_train)
             # print("labels_train.shape =", labels_train.shape) # [batch_size]
             optimizer.zero_grad()
-            
-            # outputsはSoftmax関数適用前 logitsというものらしい 
+             
             outputs = net(inputs_train)
 
             # print("outputs.shape =", outputs.shape) # [batch_size, len_classes]
@@ -108,7 +107,7 @@ def fit(
             optimizer.step()
             
 
-            # 各indexを確立順に並び替えた後に、確率値とラベルをまとめる ## 今は使ってない
+            # 各indexを確率順に並び替えた後に、確率値とラベルをまとめる ## 今は使ってない
             predicted_train_top_len_classes = torch.topk(outputs, len_classes, dim=1) #[0]が確率値、[1]がラベル
             # print("\033[91mpredicted_train_top_len_classes =\033[0m\n", predicted_train_top_len_classes)
 
