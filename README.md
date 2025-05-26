@@ -59,7 +59,7 @@ nvidia = 0
 
 [data]
 num_val = 8
-which_data = "datasetA0a_run12341w2w_run53w"
+which_data = "dataset0"
 train_data = "train"
 test_data = "test"
 ```
